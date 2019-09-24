@@ -1,6 +1,6 @@
-# nextjs-typescript-boilerplate
+# TODO application
 
-A boilerplate using Next.js and Typescript.
+The TODO app on next.js with server side rendering and typescript
 
 ## Start
 
