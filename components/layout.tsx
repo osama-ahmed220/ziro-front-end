@@ -1,44 +1,31 @@
 import * as React from "react";
-import Link from "next/link";
-import Head from "next/head";
+import { makeStyles } from '@material-ui/core/styles';
+import MHead from "./head";
+import MyAppBar from "./AppBar";
 
 export interface LayoutProps {
   title?: string;
 }
 
+const useStyles = makeStyles(() => ({
+  '@global': {
+    body: {
+      margin: 0,
+      padding: 0,
+    },
+  },
+}));
+
 const Layout: React.SFC<LayoutProps> = ({
   children,
   title = "TODO Test"
-}) => (
-  <div>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <link
-        rel="shortcut icon"
-        href="/static/favicon.ico"
-        type="image/x-icon"
-      />
-    </Head>
-    <header>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-        <span>/</span>
-        <Link href="/a">
-          <a>a</a>
-        </Link>
-        <span>/</span>
-        <Link href="/b">
-          <a>b</a>
-        </Link>
-      </nav>
-    </header>
+}) => {
+  useStyles();
+  return <>
+    <MHead title={title} />
+    <MyAppBar />
     {children}
-    <footer>&copy; 2019 zhangist</footer>
-  </div>
-);
+  </>;
+};
 
 export default Layout;
