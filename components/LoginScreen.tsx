@@ -48,7 +48,7 @@ function login() {
   console.log('No errors, submit callback called!');
 }
 
-const LoginScreen: React.FunctionComponent<ILoginScreenProps> = (props) => {
+const LoginScreen: React.FunctionComponent<ILoginScreenProps> = (_) => {
   const classes = useStyles();
   const {
     values,
