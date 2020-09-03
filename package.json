@@ -36,7 +36,7 @@
     "@types/styled-jsx": "2.2.8",
     "@zeit/next-typescript": "1.1.1",
     "cross-env": "5.2.0",
-    "graphql-code-generator": "^0.16.0",
+    "graphql-code-generator": "^0.18.2",
     "graphql-codegen-typescript-client": "^0.16.0",
     "graphql-codegen-typescript-common": "^0.16.0",
     "graphql-codegen-typescript-react-apollo": "^0.16.0",
